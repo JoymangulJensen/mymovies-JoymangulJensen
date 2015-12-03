@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <title>Hello world with Bootstrap</title>
+</head>
+
+<body>
+
+    <div class="container-fullwidth">
+        <!--La barre de navigation-->
+        <div class="navbar navbar-default" role="navigation">
+            <!-- Partie de la barre toujours affichée -->
+            <div class="navbar-header">
+                <!-- Bouton d'accès affiché à droite si la zone d'affichage est trop petite -->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-target">
+                    <span class="sr-only">Activer la navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-film"></span> My Movies</a>
+            </div>
+            <!-- Partie de la barre masquée si la surface d'affichage est insuffisante -->
+            <div class="collapse navbar-collapse" id="navbar-collapse-target">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Ajouter un film</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Administration</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bonjour, Jensen <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Profil</a></li>
+                            <li><a href="#">Quitter</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h2 class="col-md-1  col-md-offset-5">Administration</h2>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8  col-md-offset-2">
+                        <ul class="nav nav-tabs nav-justified">
+                            <li class="active"><a data-toggle="tab" href="#film">Films</a></li>
+                            <li><a data-toggle="tab" href="#utilisateurs">Utilisateurs</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
+
+
+                        <div class="tab-content">
+                            <div id="film" class="tab-pane fade in active">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Ttire</th>
+                                                <th>Réalisateur</th>
+                                                <th>Année de sortie</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class='clickable-row' data-href='movie.html'>007 Spectre</td>
+                                                <td class='clickable-row' data-href='movie.html'>Sam Mendes</td>
+                                                <td class='clickable-row' data-href='movie.html'>2015</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> </button>
+                                                    <button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Le Loup de Wall Street</td>
+                                                <td>Martin Scorsese</td>
+                                                <td>2014</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> </button>
+                                                    <button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> </button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Le Loup de Wall Street</td>
+                                                <td>Martin Scorsese</td>
+                                                <td>2014</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> </button>
+                                                    <button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div id="utilisateurs" class="tab-pane fade">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Nom</th>
+                                                <th>Prénom</th>
+                                                <th>Mail</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class='clickable-row' data-href='movie.html'>Joymangul</td>
+                                                <td class='clickable-row' data-href='movie.html'>Jensen</td>
+                                                <td class='clickable-row' data-href='movie.html'>32/13/-20</td>
+                                                <td>
+                                                    <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> </button>
+                                                    <button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> </button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="col-md-1"></div>
+
+        <div class="col-md-10">
+            <hr/>
+            <p class="text-center">Copyright <span class="glyphicon glyphicon-star-empty"></span> Joymangul Jensen</p>
+        </div>
+
+        <div class="col-md-1"></div>
+    </div>
+
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $(".clickable-row").click(function() {
+                window.document.location = $(this).data("href");
+            });
+        });
+
+    </script>
+</body>
+
+</html>

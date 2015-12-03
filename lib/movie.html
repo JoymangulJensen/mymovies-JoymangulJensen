@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/style.css"  rel="stylesheet">        
+        <title>Hello world with Bootstrap</title>    
+    </head>
+    <body>
+        
+        <div class = "container-fullwidth">
+            <!--La barre de navigation-->
+            <div class="navbar navbar-default" role="navigation">
+                <!-- Partie de la barre toujours affichée -->
+                <div class="navbar-header">
+                    <!-- Bouton d'accès affiché à droite si la zone d'affichage est trop petite -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-target">
+                        <span class="sr-only">Activer la navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-film"></span> My Movies</a>
+                </div>
+                <!-- Partie de la barre masquée si la surface d'affichage est insuffisante -->
+                <div class="collapse navbar-collapse" id="navbar-collapse-target">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Ajouter un film</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Administration</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bonjour, Jensen <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="#">Profil</a></li>
+                              <li><a href="#">Quitter</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container">
+            <div class="jumbotron">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                              <img class = "img-thumbnail" src="../img/spectre.jpg" >
+                        </div>
+                        <div class="col-md-6">
+                            <h2><strong>007 Spectre</strong></h2>
+                            <blockquote>
+                                <p>Sam Mendes</p>
+                            </blockquote>
+                            <p>Un message cryptique surgi du passé entraîne James Bond dans une mission très personnelle à Mexico puis à Rome, où                                   il rencontre Lucia Sciarra, la très belle veuve d’un célèbre criminel. Bond réussit à infiltrer une réunion                                         secrète révélant une redoutable organisation baptisée Spectre. 
+                                Pendant ce temps, à Londres, Max Denbigh, le nouveau directeur du Centre pour la Sécurité Nationale, remet en                                       cause les actions de Bond et l’existence même du MI6, dirigé par M. Bond persuade Moneypenny et Q de                                                l’aider secrètement à localiser Madeleine Swann, la fille de son vieil ennemi, Mr White, qui pourrait                                           détenir le moyen de détruire Spectre. Fille de tueur, Madeleine comprend Bond mieux que personne… 
+                                    En s’approchant du cœur de Spectre, Bond va découvrir qu’il existe peut-être un terrible lien entre lui et le                                   mystérieux ennemi qu’il traque…</p>
+                            <p><a href="#" class="btn btn-primary" role="button">Editer</a></p>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+
+            <div class="footer">
+                <div class="col-md-1"></div>
+
+                <div class="col-md-10">
+                    <hr/>
+                    <p class="text-center">Copyright <span class="glyphicon glyphicon-star-empty"></span> Joymangul Jensen</p>
+                </div>
+
+                <div class="col-md-1"></div>
+            </div>   
+            
+        </div>
+       
+            
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
