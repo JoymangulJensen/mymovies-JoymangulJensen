@@ -12,44 +12,38 @@
 </head>
 
 <body>
-
+    <!--la barre de navigation en haute de la page-->
     <div class="container-fullwidth">
-        <!--La barre de navigation-->
-        <div class="navbar navbar-default" role="navigation">
-            <!-- Partie de la barre toujours affichée -->
-            <div class="navbar-header">
-                <!-- Bouton d'accès affiché à droite si la zone d'affichage est trop petite -->
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-target">
-                    <span class="sr-only">Activer la navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-film"></span> My Movies</a>
-            </div>
-            <!-- Partie de la barre masquée si la surface d'affichage est insuffisante -->
-            <div class="collapse navbar-collapse" id="navbar-collapse-target">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Ajouter un film</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="lib/administration.html">Administration</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bonjour, Jensen <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Profil</a></li>
-                            <li><a href="#">Quitter</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <?php include("includes/header.php"); ?>
     </div>
-
+    
+    <?php
+    try
+    {
+        $bdd = new PDO('mysql:host=localhost;dbname=mymovies;charset=utf8', 'mymovies_user', 'secret');
+    }
+    catch (Exception $e)
+    {
+            die('Erreur : ' . $e->getMessage());
+    }
+    ?>
+    
+     <?php
+    // On récupère tout le contenu de la table movie
+        $reponse = $bdd->query('SELECT * FROM movie');
+    ?>
 
     <div class="container">
 
         <div class="content">
+            <?php
+                while($donnee = $reponse->fetch())
+                {
+                    echo '<h2>' . $donnee['mov_title'] .'</h2>' ;
+                    echo '<p>'. $donnee['mov_description_short'] .'</p>';
+                }
+                $reponse->closeCursor();
+            ?>
             <h2>Underworld</h2>
             <p>Selene est une guerrière vampire puissante. Dans la lutte qui oppose depuis des siècles son peuple à celui des Lycans, des loups-garous, elle est reconnue pour être l'une des tueuses les plus efficaces. Jusqu'au jour où elle tombe amoureuse de Michael Corvin, un humain qui se retrouve pris malgré lui dans l'affrontement des deux clans. Mordu par l'un des loups- garous, il devient rapidement l'un d'entre eux. Entre passion et devoir, Selene doit alors choisir son camp..</p>
 
@@ -61,16 +55,11 @@
             <h2>Seul sur Mars</h2>
             <p>Lors d’une expédition sur Mars, l’astronaute Mark Watney (Matt Damon) est laissé pour mort par ses coéquipiers, une tempête les ayant obligés à décoller en urgence. Mais Mark a survécu et il est désormais seul, sans moyen de repartir, sur une planète hostile. Il va devoir faire appel à son intelligence et son ingéniosité pour tenter de survivre et trouver un moyen de contacter la Terre. A 225 millions de kilomètres, la NASA et des scientifiques du monde entier travaillent sans relâche pour le sauver, pendant que ses coéquipiers tentent d’organiser une mission pour le récupérer au péril de leurs vies.</p>
         </div>
+        
 
+        <!--Le bas de page-->
         <div class="footer">
-            <div class="col-md-1"></div>
-
-            <div class="col-md-10">
-                <hr/>
-                <p class="text-center">Copyright <span class="glyphicon glyphicon-star-empty"></span> Joymangul Jensen</p>
-            </div>
-
-            <div class="col-md-1"></div>
+            <?php include("includes/footer.php"); ?>
         </div>
 
     </div>
