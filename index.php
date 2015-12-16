@@ -15,23 +15,18 @@
 
     <!--la barre de navigation en haute de la page-->
     <div class="container-fullwidth">
-        <?php include("includes/header.php"); ?>
+        <?php include("includes/header.php");
+        include("includes/Database.php");
+        ?>
+
     </div>
-    
-    <?php
-        try
-        {
-            $bdd = new PDO('mysql:host=localhost;dbname=mymovies;charset=utf8', 'mymovies_user', 'secret');
-        }
-        catch (Exception $e)
-        {
-                die('Erreur : ' . $e->getMessage());
-        }
-    ?>
+
 
     <?php
+    $database = new Database();
     // On récupère tout le contenu de la table movie
-        $reponse = $bdd->query('SELECT * FROM movie');
+        $reponse = $database->getAllMovies();
+
     ?>
 
     <div class="container">
