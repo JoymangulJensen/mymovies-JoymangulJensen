@@ -16,7 +16,7 @@
     <!--la barre de navigation en haute de la page-->
     <div class="container-fullwidth">
         <?php include("includes/header.php");
-        include("includes/Database.php");
+        include_once("includes/Database.php");
         ?>
 
     </div>
@@ -35,8 +35,12 @@
            <?php
                 while($donnee = $reponse->fetch())
                 {
-                    echo '<h2>' . $donnee['mov_title'] .'</h2>' ;
+                    $id = $donnee['mov_id'];
+
+                    echo '<a href="lib/movie.php?id='. $id  . '"</a> <h2>' . $donnee['mov_title'] .'</h2></a>' ;
                     echo '<p>'. $donnee['mov_description_short'] .'</p>';
+                    echo '<p>'. $id  .'</p>';
+
                 }
                 $reponse->closeCursor();
             ?>

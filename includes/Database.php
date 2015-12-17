@@ -41,5 +41,13 @@ class Database{
         $res->execute();
         return $res;
     }
+
+    public function gerMovie($id)
+    {
+        $res = $this->dbh->prepare('SELECT * FROM movie WHERE mov_id = :id');
+        $res->bindValue(':id',$id,PDO::PARAM_INT);
+        $res->execute();
+        return $res;
+    }
 }
 ?>
