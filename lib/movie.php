@@ -30,16 +30,15 @@
             $database = new Database();
             // On récupère tout le contenu de la table movie
             $reponse = $database->gerMovie($id);
-        $donnee = $reponse->fetch()
-
+        $donnee = $reponse->fetch();
         ?>
-        
+
         <div class="container">
             <div class="jumbotron">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                              <img class = "img-thumbnail" src="<?=$donnee['mov_image'] ?>g" >
+                              <img class = "img-thumbnail" src="<?=$donnee['mov_image'] ?>" >
                         </div>
                         <div class="col-md-6">
                             <h2><strong><?=$donnee['mov_title'] ?></strong></h2>
@@ -61,6 +60,6 @@
        
             
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
     </body>
 </html>
