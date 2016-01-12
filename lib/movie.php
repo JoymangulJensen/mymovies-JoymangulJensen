@@ -20,7 +20,8 @@
         <?php
             if (isset($_GET['id'])) // On a le nom et le prénom
             {
-                $id= $_GET['id'] ;            }
+                $id= $_GET['id'] ;
+            }
             else
             {
                 echo 'Il faut renseigner un nom et un prénom !';
@@ -38,7 +39,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                              <img class = "img-thumbnail" src="../img/spectre.jpg" >
+                              <img class = "img-thumbnail" src="<?=$donnee['mov_image'] ?>g" >
                         </div>
                         <div class="col-md-6">
                             <h2><strong><?=$donnee['mov_title'] ?></strong></h2>
@@ -46,7 +47,7 @@
                                 <p><?=$donnee['mov_director'] ?></p>
                             </blockquote>
                             <p><?=$donnee['mov_description_long'] ?></p>
-                            <p><a href=edit_film.php?id=<?=$id?>" class="btn btn-primary" role="button">Editer</a></p>
+                            <p><a href=edit_film.php?id=<?=$id?> class="btn btn-primary" role="button">Editer</a></p>
                         </div>
                     </div>
                   </div>

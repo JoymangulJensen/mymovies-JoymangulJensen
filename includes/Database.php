@@ -49,5 +49,27 @@ class Database{
         $res->execute();
         return $res;
     }
+
+    public function editMovie($id, $title,$director,$description_short,$description_long,$year1,$îmage)
+    {
+        $res = $this->dbh->prepare('UPDATE movie SET mov_title = :title,
+                                                    mov_director = :director,
+                                                    mov_description_short = :description_short,
+                                                    mov_description_long= :description_long,
+                                                    mov_image = :image,
+                                                    mov_year = :year1
+                                    WHERE mov_id= :id');
+
+
+        $res->bindValue(':id',$id,PDO::PARAM_INT);
+        $res->bindValue(':title',$title,PDO::PARAM_STR);
+        $res->bindValue(':director',$director,PDO::PARAM_STR);
+        $res->bindValue(':description_short',$description_short,PDO::PARAM_STR);
+        $res->bindValue(':description_long',$description_long,PDO::PARAM_STR);
+        $res->bindValue(':year1',$year1,PDO::PARAM_INT);
+        $res->bindValue(':image',$îmage,PDO::PARAM_STR);
+
+        $res->execute();
+    }
 }
 ?>

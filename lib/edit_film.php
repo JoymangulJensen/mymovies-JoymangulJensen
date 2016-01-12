@@ -28,9 +28,15 @@
     }
 
     $database = new Database();
-    // On récupère tout le contenu de la table movie
     $reponse = $database->gerMovie($id);
-    $donnee = $reponse->fetch()
+    $donnee = $reponse->fetch();
+
+    if(isset($_POST['submit']))
+    {
+        header('Location: ../index.php');
+        $database->editMovie(1,'James Bond','Sam Mendes','dited shorted','long', 2006, 'toto');
+        $database->editMovie($_GET['id'], $_POST['mov_title'], $_POST['mov_description_short'], $_POST['mov_description_long'],$_POST['mov_year'],"i'm edited");
+    }
 
     ?>
 
@@ -39,30 +45,54 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
-                        <div class="form-horizontal" role="form">
-                            <div class="form-group">
-                                <label class="col-sm-4" for="mov_title">Nom du film </label>
-                                <div class="col-sm-8">
-                                    <input type="text" class="form-control" id="mov_title">
+                        <form name="form1" method="post" action="../includes/editFilmDatabase.php">
+                            <div class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-4" for="mov_title">Nom du film </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="mov_title" value="<?=$donnee['mov_title'] ?>">
+                                    </div>
                                 </div>
 
-                            </div>
-
-                            <div class="form-group">
-                                <label class="col-sm-4"  for="mov_description_short">Description courte </label>
-                                <div class="col-sm-8">
-                                    <textarea class="form-control" rows=3 id="mov_description_short"></textarea>
+                                <div class="form-group">
+                                    <label class="col-sm-4"  for="mov_description_short">Description courte </label>
+                                    <div class="col-sm-8">
+                                        <textarea class="form-control" rows=3 id="mov_description_short"><?=$donnee['mov_description_short'] ?></textarea>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group">
-                                <label class="col-sm-4"  for="mov_description_short">Description courte </label>
-                                <div class="col-sm-8">
-                                    <textarea class="form-control" rows=3 id="mov_description_short"></textarea>
+                                <div class="form-group">
+                                    <label class="col-sm-4"  for="mov_description_long">Description longue </label>
+                                    <div class="col-sm-8">
+                                        <textarea class="form-control" rows=5 id="mov_description_long"><?=$donnee['mov_description_long'] ?></textarea>
+                                    </div>
                                 </div>
-                            </div>
 
-                        </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4" for="mov_director">Réalisateur </label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="mov_director" value="<?=$donnee['mov_director'] ?>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4" for="mov_year">Année de sortie </label>
+                                    <div class="col-sm-8">
+                                        <input type="number" class="form-control" id="mov_year" value="<?=$donnee['mov_year'] ?>">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4" for="mov_image">Image </label>
+                                    <div class="col-sm-8">
+                                        <input type="file" class="form-control" id="mov_image">
+                                    </div>
+                                </div>
+
+                                <input type="submit" name="insert" value="insert" />
+
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
