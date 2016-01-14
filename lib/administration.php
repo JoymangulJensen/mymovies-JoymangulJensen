@@ -14,37 +14,21 @@
 <body>
 
     <div class="container-fullwidth">
-        <!--La barre de navigation-->
-        <div class="navbar navbar-default" role="navigation">
-            <!-- Partie de la barre toujours affichée -->
-            <div class="navbar-header">
-                <!-- Bouton d'accès affiché à droite si la zone d'affichage est trop petite -->
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-target">
-                    <span class="sr-only">Activer la navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-film"></span> My Movies</a>
-            </div>
-            <!-- Partie de la barre masquée si la surface d'affichage est insuffisante -->
-            <div class="collapse navbar-collapse" id="navbar-collapse-target">
-                <ul class="nav navbar-nav">
-                    <li><a href="#">Ajouter un film</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#">Administration</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bonjour, Jensen <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Profil</a></li>
-                            <li><a href="#">Quitter</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        <div class = "container-fullwidth">
+            <?php include("../includes/header.php");
+            include_once("../includes/Database.php");
+            ?>
         </div>
     </div>
+
+    <?php
+        $database = new Database();
+        // On récupère tout le contenu de la table movie
+        $reponse = $database->getAllMovies();
+        if(isset($_POST['delete'])){
+            $database->delMovie($_POST['mov_id']);
+        }
+    ?>
 
 
     <div class="container-fluid">
@@ -79,32 +63,48 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>007 Spectre</td>
-                                                <td>Sam Mendes</td>
-                                                <td>2015</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> </button>
-                                                    <button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> </button>
-                                                </td>
+                                                <?php
+                                                    while($donnee = $reponse->fetch())
+                                                    {
+                                                        $id = $donnee['mov_id'];
+                                                        $url = '"edit_film.php?id=' . $id . '"';
+                                                ?>
+                                                    <td><?=$donnee['mov_title']?></td>
+                                                    <td><?=$donnee['mov_director']?></td>
+                                                    <td><?=$donnee['mov_year']?></td>
+                                                    <td>
+                                                        <a href=<?php echo $url ?> class="btn btn-info btn-xs" role="button"> <span class="glyphicon glyphicon-edit"></span></a>
+                                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#delModal"><span class="glyphicon glyphicon-remove"></span> </button>
+
+                                                        <!-- Modal -->
+                                                        <div id="delModal" class="modal fade" role="dialog">
+                                                            <div class="modal-dialog modal-sm">
+
+                                                                <!-- Modal content-->
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                        <h4 class="modal-title">Alerte</h4>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <p>Voulez-vous supprimer le film <?=$donnee['mov_title']?></p>
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                                                                            <input type="hidden" name="mov_id" value="<?=$id ?>">
+                                                                            <button type="submit" name="delete" class="btn btn-default">Supprrimer</button>
+                                                                        </form>
+
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                <?php } ?>
+
                                             </tr>
-                                            <tr>
-                                                <td>Le Loup de Wall Street</td>
-                                                <td>Martin Scorsese</td>
-                                                <td>2014</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> </button>
-                                                    <button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> </button>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Le Loup de Wall Street</td>
-                                                <td>Martin Scorsese</td>
-                                                <td>2014</td>
-                                                <td>
-                                                    <button type="button" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-edit"></span> </button>
-                                                    <button type="button" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-remove"></span> </button>
-                                                </td>
-                                            </tr>
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -144,23 +144,15 @@
     </div>
 
     <div class="footer">
-        <div class="col-md-1"></div>
-
-        <div class="col-md-10">
-            <hr/>
-            <p class="text-center">Copyright <span class="glyphicon glyphicon-star-empty"></span> Joymangul Jensen</p>
+        <div class="footer">
+            <?php include("../includes/footer.php"); ?>
         </div>
-
-        <div class="col-md-1"></div>
-    </div>
-
     </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
-    </script>
 </body>
 
 </html>

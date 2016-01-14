@@ -17,7 +17,7 @@
             <li><a href="#">Ajouter un film</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><a href="lib/administration.html">Administration</a></li>
+            <li><a href="lib/administration.php">Administration</a></li>
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Bonjour, Jensen <span class="caret"></span></a>
                 <ul class="dropdown-menu">

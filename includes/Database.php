@@ -71,5 +71,13 @@ class Database{
 
         $res->execute();
     }
+
+    public function delMovie($id)
+    {
+        $res =$this->dbh->prepare('DELETE from movie where mov_id=:id');
+        $res->bindValue(':id',$id,PDO::PARAM_INT);
+
+        $res->execute();
+    }
 }
 ?>
