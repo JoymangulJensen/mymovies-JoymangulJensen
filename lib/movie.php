@@ -7,7 +7,7 @@
         
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/style.css"  rel="stylesheet">        
-        <title>Hello world with Bootstrap</title>    
+        <title>Les Films</title>
     </head>
     <body>
         
@@ -20,7 +20,7 @@
         <?php
             if (isset($_GET['id'])) // On a le nom et le prénom
             {
-                $id= $_GET['id'] ;
+                $id= htmlspecialchars ( $_GET['id'] );
             }
             else
             {
@@ -28,9 +28,12 @@
             }
 
             $database = new Database();
-            // On récupère tout le contenu de la table movie
-            $reponse = $database->gerMovie($id);
-        $donnee = $reponse->fetch();
+                $reponse = $database->gerMovie($id);
+                $donnee = $reponse->fetch();
+            if($donnee == NULL)
+            {
+                header('Location: ../index.php');
+            }
         ?>
 
         <div class="container">

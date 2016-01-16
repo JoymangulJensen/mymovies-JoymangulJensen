@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="612803b1-3e05-45cb-867f-330891dc06bb" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/administration.html" afterPath="$PROJECT_DIR$/lib/administration.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/addFilmDatabase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/includes/deleteFilmDatabase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/addMovie.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/Database.php" afterPath="$PROJECT_DIR$/includes/Database.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="$PROJECT_DIR$/includes/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/administration.php" afterPath="$PROJECT_DIR$/lib/administration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/edit_film.php" afterPath="$PROJECT_DIR$/lib/edit_film.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/movie.php" afterPath="$PROJECT_DIR$/lib/movie.php" />
     </list>
     <ignored path="mymovies-JoymangulJensen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,89 +32,7 @@
     <favorites_list name="mymovies-JoymangulJensen" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.8461537">
-              <caret line="39" column="84" selection-start-line="39" selection-start-column="77" selection-end-line="39" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit_film.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/edit_film.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384">
-              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="85" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Database.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/includes/Database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7571885">
-              <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-              <folding>
-                <marker date="1452757801771" expanded="true" signature="1026:1045" placeholder="SELECT * FRO... movie" />
-                <marker date="1452757801771" expanded="true" signature="1178:1216" placeholder="SELECT * FRO... movie" />
-                <marker date="1452757801771" expanded="true" signature="1470:1969" placeholder="UPDATE movie... " />
-                <marker date="1452757801771" expanded="true" signature="2528:2562" placeholder="DELETE from " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="administration.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/administration.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.5384617">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-              <folding>
-                <marker date="1452757682516" expanded="true" signature="893:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="925:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1054:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1088:1484" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1148:1461" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1212:1434" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1518:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1562:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1615:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1691:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1754:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1824:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1872:2290" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="1921:2241" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="2338:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="2387:2653" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="3131:3197" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="3131:4609" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="3700:4609" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="3796:4609" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="3975:4609" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="4070:4399" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="4492:4609" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="4797:4904" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="5991:7514" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="6054:7479" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="6124:7440" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="6172:6572" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="6221:6523" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="6620:7395" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="6669:7346" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="6920:6986" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="6920:7296" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="7667:7778" placeholder="..." />
-                <marker date="1452757682516" expanded="true" signature="7696:7767" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -117,10 +40,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/includes/header.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/includes/header.php" />
+        <option value="$PROJECT_DIR$/includes/deleteFilmDatabase.php" />
+        <option value="$PROJECT_DIR$/includes/addFilmDatabase.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/lib/addMovie.php" />
         <option value="$PROJECT_DIR$/lib/administration.php" />
+        <option value="$PROJECT_DIR$/lib/movie.php" />
         <option value="$PROJECT_DIR$/includes/Database.php" />
+        <option value="$PROJECT_DIR$/lib/edit_film.php" />
       </list>
     </option>
   </component>
@@ -135,7 +64,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1378" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -237,6 +167,8 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
     <property name="ChangesBrowser.SHOW_FLATTEN" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.php">
     <configuration default="false" name="index.php" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mymovies-JoymangulJensen/index.php">
@@ -290,28 +222,37 @@
       <option name="number" value="Default" />
       <updated>1452637136580</updated>
     </task>
+    <task id="LOCAL-00001" summary="Complete admin page link to edit film done and able to delete film after comfirmation done">
+      <created>1452757893120</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1452757893120</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1378" height="744" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1676783" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13161875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934534" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -326,15 +267,87 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Complete admin page link to edit film done and able to delete film after comfirmation done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete admin page link to edit film done and able to delete film after comfirmation done" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/includes/header.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42696628">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="84" selection-start-line="39" selection-start-column="77" selection-end-line="39" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/edit_film.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1452983214988" expanded="true" signature="1027:1046" placeholder="SELECT * FRO... movie" />
+            <marker date="1452983214988" expanded="true" signature="1179:1217" placeholder="SELECT * FRO... movie" />
+            <marker date="1452983214988" expanded="true" signature="1636:2159" placeholder="INSERT INTO `movie`... " />
+            <marker date="1452983214988" expanded="true" signature="2735:3234" placeholder="UPDATE movie... " />
+            <marker date="1452983214988" expanded="true" signature="3793:3827" placeholder="DELETE from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/administration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="84" selection-start-line="39" selection-start-column="77" selection-end-line="39" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/edit_film.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/Database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1452983214988" expanded="true" signature="1027:1046" placeholder="SELECT * FRO... movie" />
+            <marker date="1452983214988" expanded="true" signature="1179:1217" placeholder="SELECT * FRO... movie" />
+            <marker date="1452983214988" expanded="true" signature="1636:2159" placeholder="INSERT INTO `movie`... " />
+            <marker date="1452983214988" expanded="true" signature="2735:3234" placeholder="UPDATE movie... " />
+            <marker date="1452983214988" expanded="true" signature="3793:3827" placeholder="DELETE from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/administration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -343,79 +356,107 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42696628">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="26" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/editFilmDatabase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="37" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_0.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34829444">
+          <caret line="361" column="9" selection-start-line="361" selection-start-column="9" selection-end-line="361" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/addFilmDatabase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6153846">
+          <caret line="4" column="66" selection-start-line="4" selection-start-column="66" selection-end-line="4" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3076923">
+          <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+          <folding>
+            <marker date="1452977920150" expanded="true" signature="1170:2356" placeholder="..." />
+            <marker date="1452977920150" expanded="true" signature="1206:1562" placeholder="..." />
+            <marker date="1452977920150" expanded="true" signature="1611:2345" placeholder="..." />
+            <marker date="1452977920150" expanded="true" signature="1963:2331" placeholder="..." />
+            <marker date="1452977920150" expanded="true" signature="2186:2313" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="39" column="84" selection-start-line="39" selection-start-column="77" selection-end-line="39" selection-end-column="84" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/edit_film.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.30520648">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/administration.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <marker date="1452757682516" expanded="true" signature="893:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="925:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1054:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1088:1484" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1148:1461" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1212:1434" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1518:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1562:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1615:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1691:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1754:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1824:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1872:2290" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="1921:2241" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="2338:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="2387:2653" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="3131:3197" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="3131:4609" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="3700:4609" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="3796:4609" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="3975:4609" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="4070:4399" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="4492:4609" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="4797:4904" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="5991:7514" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="6054:7479" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="6124:7440" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="6172:6572" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="6221:6523" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="6620:7395" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="6669:7346" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="6920:6986" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="6920:7296" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="7667:7778" placeholder="..." />
-            <marker date="1452757682516" expanded="true" signature="7696:7767" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.54937166">
+          <caret line="84" column="74" selection-start-line="84" selection-start-column="74" selection-end-line="84" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addMovie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/deleteFilmDatabase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12208258">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/edit_film.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82405746">
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/movie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3357271">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="35" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/includes/Database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7571885">
-          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.030520646">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
-            <marker date="1452757801771" expanded="true" signature="1026:1045" placeholder="SELECT * FRO... movie" />
-            <marker date="1452757801771" expanded="true" signature="1178:1216" placeholder="SELECT * FRO... movie" />
-            <marker date="1452757801771" expanded="true" signature="1470:1969" placeholder="UPDATE movie... " />
-            <marker date="1452757801771" expanded="true" signature="2528:2562" placeholder="DELETE from " />
+            <marker date="1452983214988" expanded="true" signature="1027:1046" placeholder="SELECT * FRO... movie" />
+            <marker date="1452983214988" expanded="true" signature="1179:1217" placeholder="SELECT * FRO... movie" />
+            <marker date="1452983214988" expanded="true" signature="1636:2159" placeholder="INSERT INTO `movie`... " />
+            <marker date="1452983214988" expanded="true" signature="2735:3234" placeholder="UPDATE movie... " />
+            <marker date="1452983214988" expanded="true" signature="3793:3827" placeholder="DELETE from " />
           </folding>
         </state>
       </provider>

@@ -8,7 +8,7 @@
 
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <title>Mon premier site dynamique</title>
+    <title>Bienvenue sur MyMoviese</title>
 </head>
 
 <body>

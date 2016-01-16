@@ -8,7 +8,7 @@
 
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
-    <title>Hello world with Bootstrap</title>
+    <title>Administration</title>
 </head>
 
 <body>
@@ -25,9 +25,6 @@
         $database = new Database();
         // On récupère tout le contenu de la table movie
         $reponse = $database->getAllMovies();
-        if(isset($_POST['delete'])){
-            $database->delMovie($_POST['mov_id']);
-        }
     ?>
 
 
@@ -90,9 +87,9 @@
                                                                         <p>Voulez-vous supprimer le film <?=$donnee['mov_title']?></p>
                                                                     </div>
                                                                     <div class="modal-footer">
-                                                                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                                                                        <form action="../includes/deleteFilmDatabase.php" method="post">
                                                                             <input type="hidden" name="mov_id" value="<?=$id ?>">
-                                                                            <button type="submit" name="delete" class="btn btn-default">Supprrimer</button>
+                                                                            <button type="submit" name="delete" class="btn btn-danger">Supprrimer</button>
                                                                         </form>
 
                                                                     </div>

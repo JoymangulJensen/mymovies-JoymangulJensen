@@ -7,7 +7,7 @@
 
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/style.css"  rel="stylesheet">
-        <title>Hello world with Bootstrap</title>
+        <title>Modifier un film</title>
     </head>
 <body>
 
@@ -30,6 +30,10 @@
     $database = new Database();
     $reponse = $database->gerMovie($id);
     $donnee = $reponse->fetch();
+    if($donnee == NULL)
+    {
+        header('Location: ../index.php');
+    }
 
     ?>
 
